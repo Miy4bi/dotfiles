@@ -7,6 +7,6 @@
     ch = checkout
     co = commit
     st = status
-    br = branch --all
+    br = branch
 [core]
     editor = emacs
