@@ -37,10 +37,15 @@ if [ ! -d ~/.opam ]; then
     tar -zxf ~/opam-full-2.0.6.tar.gz -C ~
     cd ~/opam-full-2.0.6/
     ./configure && make lib-ext && make
+    export PATH="$HOME/opam-full-2.0.6:$PATH"
+    opam init
     echo "opam installed"
 else
     echo "found opam"
 fi
 
+# update .bashrc
+# cat .bashrc >> ~/.bashrc
 . ~/.bashrc
+
 echo "done all"
